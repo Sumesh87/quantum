@@ -1,0 +1,16 @@
+#locator repository for Login page
+#search.text.box = {\"locator\":\"name=q\",\"desc\":\"Search Text Box\"}
+
+nflows.documentmanager.treeSearchBx = //input[contains(@data-ng-model,'tree_search')]
+nflows.documentmanager.EntityType=//span[contains(text(),'Hospital Management System')]
+nflows.documentmanager.Entitylevelfields=//span[contains(text(),'Entity Fields')]
+nflows.documentmanager.Workflowlevelfields=//span[contains(text(),'Workflow Fields')]
+nflows.documentmanager.searchBxGridData=//input[@placeholder='Search...' and @ng-change='searchDocumentGridData()']
+nflows.documentmanager.searchVersionGrid=//div[@class='ui-grid-contents-wrapper']
+nflows.documentmanager.entityRowRecord={"locator":"xpath=//span[@popover-title='%s']"} 
+nflows.documentmanager.fieldentityRowRecord={"locator":"xpath=//div[contains(text(),'%s')]"} 
+nflows.documentmanager.downloadParentfile=//img[@class='document-download-img']
+nflows.documentmanager.downloadAllfile=(//img[@data-ng-click='downloadAttachment(doc.document_key)'])[2]
+
+
+

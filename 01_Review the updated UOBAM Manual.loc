@@ -1,0 +1,23 @@
+#locator repository for trac home page
+
+nflows.userTask.UOBAMManualName=//label[text()='UOBAM Manual Name' or contains(text(),'UOBAM Manual Name')]/following-sibling::div/input
+nflows.userTask.Section=//label[text()='Section' or contains(text(),'Section')]/following-sibling::div/input
+nflows.userTask.SectionName=//label[text()='Section Name' or contains(text(),'Section Name')]/following-sibling::div/input
+nflows.userTask.Chapter=//label[text()='Chapter' or contains(text(),'Chapter')]/following-sibling::div/input
+
+nflows.userTask.VersionNumber=//label[text()='Version Number' or contains(text(),'Version Number')]/following-sibling::div/input
+nflows.userTask.InitiationDate=//label[text()='Endorsed Date' or contains(text(),'Endorsed Date')]/following-sibling::div/input
+nflows.userTask.EndorsedDate=//label[contains(text(),'Endorsed Date')]/following-sibling::div/img
+nflows.userTask.UOBAMManual=(//label[contains(text(),'UOBAM Manual')]/following-sibling::div/input[contains(@ng-init,'J08 UOBAM Asset Servicing (V2.0) Jul 19.docx')])[1]
+
+nflows.userTask.ManualOwners=((//label[contains(text(),'Manual Owners')])[1]/following::*)[5]
+nflows.userTask.ManualUpdates=//label[text()='Manual Updates' or contains(text(),'Manual Updates')]/following-sibling::div/textarea
+
+nflows.fieldGrp.ManualApprovalSummary==//label[contains(text(),'Manual Approval Summary')]/following::div[@class='ui-grid-contents-wrapper']
+
+
+nflows.userTask.dynamicSingleLine=//label[text()='%s' or contains(text(),'%s')]/following-sibling::div/input	
+nflows.userTask.dynamicMultiLine=//label[text()='%s' or contains(text(),'%s')]/following-sibling::div/textarea	
+nflows.userTask.dynamicDate=//label[text()='%s' or contains(text(),'%s')]/following-sibling::div/img
+nflows.userTask.dynamicDropdown=((//label[contains(text(),'%s')])[1]/following::*)[5]
+nflows.userTask.dynamicAttachment=//label[text()='%s']/following-sibling::div/input[@type='file']

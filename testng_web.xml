@@ -1,0 +1,68 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!-- Testng xml -->
+<suite name="Nflows" verbose="1" parallel="none"
+	thread-count="1">
+	<listeners>
+		<listener class-name="com.quantum.listeners.QuantumReportiumListener" />
+	</listeners>
+	
+	<test name="Nflows" enabled="false" thread-count="1">
+		<parameter name="driver.capabilities.model" value="iPhone.*"></parameter>
+		<groups>
+			<run>
+				<include name="@TC_00_LaunchNflows" />	
+				<include name="@TC_01_NflowsLogin" />				
+				<include name="@TC_04_EditEntityDefinition" />  
+				<exclude name="@TC_05_CreateRuleDefinition" />				
+				<exclude name="@TC_08_MyRequest" />			  
+				<exclude name="@TC_09_WidgetDefinition" /> 
+				<include name="@TC_11_DocumentManager" /> 
+ 				<include name="@TC_12_NflowsLogout" /> 
+ 				<include name="@TC_14_CreatePDFReport" /> 
+ 				<exclude name="@TC_15_CreateTestResult" />
+		    </run>
+        </groups>
+             <classes>
+                    <class
+                    name="com.qmetry.qaf.automation.step.client.gherkin.GherkinScenarioFactory" />
+             </classes>
+       </test>
+       
+       <test name="Workflow" enabled="true" thread-count="1">
+		<parameter name="driver.capabilities.model" value="galaxy.*"></parameter>
+		<groups>
+			<run>
+				<include name="@WF_00_LaunchNflows" />
+ 				<include name="@WF_01_NflowsLogin" />
+ 				<exclude name="@WF_02_MyRequest" />			
+ 				<exclude name="@WF_03_MyTask_approval" />
+ 				<include name="@WF_04_MyTask_rejection" />
+ 				<include name="@WF_06_NflowsLogout" /> 				
+
+				<include name="@WF_07_CreateTestResult" />			
+				<include name="@WF_08_CreatePDFReport" />				
+		    </run>
+             </groups>
+             <classes>
+                    <class
+                    name="com.qmetry.qaf.automation.step.client.gherkin.GherkinScenarioFactory" />
+             </classes>
+       </test>
+       
+       <test name="Entity" enabled="false" thread-count="1">
+		<parameter name="driver.capabilities.model" value="galaxy.*"></parameter>
+		<groups>
+			<run>
+				<include name="@TC_00_LaunchNflows" />
+ 				<include name="@TC_01_NflowsLogin" />		
+ 				<include name="@TC_03_EntityCreation" />
+ 				<exclude name="@TC_12_NflowsLogout" />
+		    </run>
+             </groups>
+             <classes>
+                    <class
+                    name="com.qmetry.qaf.automation.step.client.gherkin.GherkinScenarioFactory" />
+             </classes>
+       </test>
+             
+</suite>

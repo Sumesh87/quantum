@@ -1,0 +1,10 @@
+#locator repository for Login page
+#search.text.box = {\"locator\":\"name=q\",\"desc\":\"Search Text Box\"}
+
+nflows.entitycreation.newEntityCreation.button=//button[contains(text(),'%s')]
+nflows.entitycreation.downloadXML.link=//a[contains(text(),'Download XML Template')]
+nflows.entitycreation.downloadJSON.link=//a[contains(text(),'Download JSON Template')]
+nflows.entitycreation.downloadExcel.link=//a[contains(text(),'Download Excel Template')]
+nflows.entitycreation.search.textBox=//input[@placeholder='Search...']
+nflows.entitycreation.entitydatatable.grid=(//div[@class='ui-grid-contents-wrapper'])[1]
+nflows.entitycreation.dataRow.grid=//div[@class='ui-grid-row ng-scope']
